@@ -1,0 +1,117 @@
+@use "../abstract/index" as *;
+
+on {
+  background: $background;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  padding: 2rem 4rem;
+  font-family: $font-header;
+
+  &__logo {
+    font-size: 3rem;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  li {
+    display: inline;
+    padding: 0 3rem;
+    font-family: $font-text;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+
+    .bi-search {
+      font-size: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.hero {
+  // height: 80rem;
+  background: rgb(9,19,93);
+  background: linear-gradient(15deg, rgba(9,19,93,1) 4%, rgba(78,8,43,1) 45%, rgba(131,2,30,1) 64%, rgba(195,89,28,1) 98%, rgba(208,91,25,1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15rem;
+  padding-bottom: 12rem;
+
+  
+  &__content {
+    flex: 0 0 50%;
+  }
+
+  &__content--text {
+    flex: 0 0 50%;
+  }
+
+  h1 {
+    font-size: 9rem;
+    font-family: $font-header;
+    color: white;
+  }
+
+  p {
+    color: white;
+    font-family: $font-text;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    padding-right: 5rem;
+  }
+
+  &__content__btns {
+    margin-top: 4rem;
+
+    a {
+      font-size: 1.8rem;
+      margin-right: 2rem;
+    }
+
+    .bi {
+      margin-right: 1rem;
+    }
+  }
+
+  &__content--image {
+    text-align: center;
+    display: flex;
+    margin-left: 6rem;
+   
+    img {
+      width: 100%;
+      border-radius: 10%;
+      margin-right: 4rem;
+    }
+  }
+
+  &__content--stat {
+    width: 2rem;
+  }
+
+  .stat {
+    display: flex;
+
+    p {
+      font-size: 5rem;
+      font-family: $font-header;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}

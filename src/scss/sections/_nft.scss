@@ -1,0 +1,106 @@
+@use "../abstract/index" as *;
+
+.nft-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nft__card {
+  background-color: $card-bg;
+  padding: 1rem;
+  font-family: $font-header;
+  width: 40rem;
+  border-radius: .5rem;
+  width: 24%;
+
+  &__image {
+    text-decoration: none;
+    
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .details__creator {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    align-items: center;
+
+    &__image {
+      width: 4rem;
+      height: 4rem;
+  
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  
+    &__name {
+      font-size: 1.6rem;
+      color: white;
+      padding-left: 1rem;
+    }
+  }
+
+  .details__amount {
+    display: flex;
+    font-size: 1.8rem;
+    color: white;
+
+    .bi {
+      color: green;
+      padding-right: .5rem;
+    }
+  }
+
+
+  .nft__cta {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+
+  .cta__history {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: $white;
+    align-items: center;
+
+    .bi {
+      color: $white;
+      padding-right: 1rem;
+    }
+  }
+
+  .cta__btn {
+    font-size: 1.4rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+    }
+
+    .bi {
+      padding-right: 1rem;
+    }
+  }
+}
