@@ -62,18 +62,19 @@ body {
 }
 
 .py {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 
 .px {
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
 }
 
 .heading {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 2rem;
 }
 .heading__sub {
   color: #FA4B3A;
@@ -186,7 +187,10 @@ on {
 }
 
 .nft-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 4rem;
   justify-content: space-between;
 }
 
@@ -194,16 +198,20 @@ on {
   background-color: rgb(29, 29, 32);
   padding: 1rem;
   font-family: "Reem Kufi", sans-serif;
-  width: 40rem;
   border-radius: 0.5rem;
-  width: 24%;
 }
 .nft__card__image {
   text-decoration: none;
+  overflow: hidden;
 }
 .nft__card__image img {
   width: 100%;
   border-radius: 1rem;
+  transition: all 0.5s;
+}
+.nft__card__image img:hover {
+  transform: scale(1.2);
+  /* (150% zoom)*/
 }
 .nft__card__name {
   font-size: 1.8rem;
@@ -245,7 +253,7 @@ on {
 .nft__card .nft__cta {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 .nft__card .cta__history {
   display: flex;
@@ -267,9 +275,116 @@ on {
   border: 1px solid white;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
+  position: relative;
+  z-index: 5;
+  display: block;
+  overflow: hidden;
+}
+.nft__card .cta__btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(251, 76, 59) 35%, rgb(226, 43, 109) 100%);
+  transition: all 0.2s ease-in;
+  z-index: -1;
+  transform: translateX(-100%);
+  border-radius: 2rem;
+  font-size: 1.6rem;
+}
+.nft__card .cta__btn a:hover::before {
+  transform: translateX(0);
 }
 .nft__card .cta__btn .bi {
   padding-right: 1rem;
+}
+
+.explore-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+}
+
+.topsellers, .work {
+  background-color: rgb(24, 26, 37);
+}
+
+.sellers-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.sellers-card {
+  background-color: rgb(29, 29, 32);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  align-items: center;
+  flex: 0 0 32%;
+}
+.sellers-card img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+.sellers-card .sellers-card__details {
+  flex-grow: 2;
+  padding-right: 4rem;
+}
+.sellers-card .sellers-card__details .name {
+  font-size: 1.6rem;
+  padding: 0.1rem 0;
+}
+.sellers-card .sellers-card__details .eth {
+  color: #d0c5c5;
+}
+.sellers-card .sellers-card__details .username {
+  color: #d0c5c5;
+}
+.sellers-card .sellers-card__item {
+  border-left: 1px solid #d0c5c5;
+  text-align: center;
+  padding-left: 1rem;
+}
+.sellers-card .sellers-card__item .items-sold {
+  font-size: 1.8rem;
+}
+
+.steps-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-card {
+  background-color: rgb(29, 29, 32);
+  flex: 0 0 32%;
+  border-radius: 1rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 3rem;
+}
+.step-card img {
+  width: 10rem;
+}
+.step-card h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #FA4B3A;
+  font-family: "Reem Kufi", sans-serif;
+}
+.step-card p {
+  font-size: 1.6rem;
+  color: #d0c5c5;
+  line-height: 1.8;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */

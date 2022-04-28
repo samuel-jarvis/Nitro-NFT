@@ -1,1 +1,93 @@
 @use "../abstract/index" as *;
+
+// Top Sellers Section
+.topsellers, .work {
+  background-color: $section-bg;
+}
+
+.sellers-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.sellers-card {
+  background-color: $card-bg;
+  // width: 28rem;
+  font-family: $font-text;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  align-items: center;
+  flex: 0 0 32%;
+
+  img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;
+    margin-right: 1rem;
+  }
+
+  .sellers-card__details {
+    flex-grow: 2;
+    padding-right: 4rem;
+
+    .name {
+      font-size: 1.6rem;
+      padding: .1rem 0;
+    }
+
+    .eth {
+      color: $white;
+    }
+
+    .username {
+      color: $white;
+    }
+  }
+
+  .sellers-card__item {
+    border-left: 1px solid $white;
+    text-align: center;
+    padding-left: 1rem;
+
+    .items-sold {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// Stepe to create NFT
+.steps-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-card {
+  background-color: $card-bg;
+  flex: 0 0 32%;
+  border-radius: 1rem;
+  color: white;
+  font-family: $font-text;
+  padding: 3rem;
+
+  img {
+    width: 10rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin: .5rem 0;
+    color: $orange;
+    font-family: $font-header;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: $white;
+    line-height: 1.8;
+  }
+}
