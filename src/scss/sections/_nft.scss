@@ -6,7 +6,6 @@
   grid-template-rows: 1fr;
   grid-gap: 4rem;
   justify-content: space-between;
-  
 }
 
 .nft__card {
@@ -145,4 +144,20 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 2rem;
+}
+
+@include media(1200px){
+  .explore-cards, .nft-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+
+@include media (600px){
+  .explore-cards, .nft-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+  }
 }

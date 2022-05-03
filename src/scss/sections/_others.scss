@@ -6,14 +6,34 @@
 }
 
 .sellers-cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 4rem;
   margin-bottom: 4rem;
+}
+
+@include media (1000px){
+  .sellers-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+@include media (700px){
+  .sellers-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .sellers-card {
   background-color: $card-bg;
-  // width: 28rem;
   font-family: $font-text;
   color: white;
   display: flex;
@@ -22,7 +42,6 @@
   font-size: 1.4rem;
   border-radius: 1rem;
   align-items: center;
-  flex: 0 0 32%;
 
   img {
     width: 7rem;
@@ -34,6 +53,12 @@
   .sellers-card__details {
     flex-grow: 2;
     padding-right: 4rem;
+
+    @include media (1000px){
+      & {
+        padding-right: 0;
+      }
+    }
 
     .name {
       font-size: 1.6rem;
@@ -62,13 +87,13 @@
 
 // Stepe to create NFT
 .steps-card {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
 }
 
 .step-card {
   background-color: $card-bg;
-  flex: 0 0 32%;
+  // flex: 0 0 32%;
   border-radius: 1rem;
   color: white;
   font-family: $font-text;
@@ -76,6 +101,16 @@
 
   img {
     width: 10rem;
+    transition: all 0.5s;
+    animation-duration: 2s;
+    animation-iteration-count: ease;
+    animation-iteration-count: infinite
+  }
+
+
+  &:hover img {
+    width: 12rem;
+    animation-name: bounce;
   }
 
   h3 {
@@ -90,4 +125,173 @@
     color: $white;
     line-height: 1.8;
   }
+}
+
+
+// Footer Section
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  font-family: $font-text;
+
+  @include media (800px){
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.footer-section {
+  .logo {
+    color: $orange;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+
+    @include media (1200px){
+      &{
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .socials {
+    font-size: 2rem;
+    margin-top: 2rem;
+
+    .bi {
+      display: inline-block;
+      border: 1px solid $white;
+      border-radius: 50%;
+      padding: .8rem 1.3rem;
+      margin-right: 2rem;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: $orange;
+        border: none;
+        color: black;
+      }
+    }
+  }
+
+  a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration-color: $pink;
+    color: white;
+
+    @include media (800px){
+      &{
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .heading {
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+
+    @include media (800px){
+      &{
+        font-size: 2.2rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 45px;
+      height: 3px;
+      background-color: $pink;
+      color: $orange;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+  
+
+  input {
+    font-size: 1.8rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    color: white;
+    width: 100%;
+  }
+
+  .bi-send {
+    background-color: #FA4B3A;
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin-left: -50px;
+    height: 6rem;
+    /* display: inline-block; */
+    padding: 0.4rem 1rem;
+  }
+
+  @include media (800px){
+    & {
+      margin-bottom: 4rem;
+    }
+  }
+
+}
+
+.footer-section--links {
+  margin: 0 auto;
+
+  @include media (800px){
+    &{
+      margin: 0;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.swiper-wrapper {
+  align-items: center;
+
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background: $background;
+  font-size: 1.4rem !important;
+  // padding: .5rem 1rem !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 1rem;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 1.2rem !important;
+  color: white;
+}
+
+@keyframes bounce {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 3px solid $pink;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 30;
 }

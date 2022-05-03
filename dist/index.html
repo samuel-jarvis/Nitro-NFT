@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,400;1,500&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/main.d9ee62f6.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
   <script defer="" src="/app.77c12427.js"></script>
   <title>Nitro NFt</title>
 <script src="/main.d9ee62f6.js"></script></head>
@@ -32,14 +35,39 @@
       <div class="nav__actions">
         <i class="bi bi-search"></i>
         <a href="#" class="btn btn--border">Connect Wallet</a>
-      </div>
+        <div class="menu-btn">
+          <i class="bi bi-list"></i>
+        </div>
+      </div>    
     </nav>
+
+    <div class="overlay">
+      <div class="close-btn">
+        <i class="bi bi-x-lg"></i>
+      </div>
+
+      <div class="nav__links">
+        <ul>
+          <li class="links__list--mobile"><a href="">Home</a></li>
+          <li class="links__list--mobile"><a href="">Auction</a></li>
+          <li class="links__list--mobile"><a href="">Top</a></li>
+          <li class="links__list--mobile"><a href="">Explore</a></li>
+          <li class="links__list--mobile"><a href="">Contact</a></li>
+          <li class="links__list--mobile"><a href="#" class="btn btn--border btn--connect">Connect Wallet</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="overlay overlay2">
+
+    </div>
   </header>
 
   <div class="hero px">
     <div class="hero__content hero__content--text">
-      <h1>Create your <br> NFT Dream <br> Gallery</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic libero unde eius eaque dolor fugiat explicabo, iste laboriosam aut reprehenderit magnam amet.</p>
+      <h1 class="hero-h1">Create your NFT Dream Gallery</h1>
+      <p class="hero-p">Find Exclusive Digital artwork, made by amazing people. Make money by doing something your'e passionate about.</p>
 
       <div class="hero__content__btns">
         <a href="" class="btn--cta"> <i class="bi bi-send"></i> Explore</a>
@@ -48,20 +76,33 @@
     </div>
 
     <div class="hero__content hero__content--image">
-      <img src="https://lh3.googleusercontent.com/v0NuyV-qTgBd3d_V5eq7HY1O0VaGhLomgNeKqHZym79kTCgqyd_jwD9LPPYasLg4kX5tYZXdwX5AWbrweitaCkDn0e0fVtmW9jOKOA=w361" alt="">
+      <div class="image">
+        <img src="https://lh3.googleusercontent.com/v0NuyV-qTgBd3d_V5eq7HY1O0VaGhLomgNeKqHZym79kTCgqyd_jwD9LPPYasLg4kX5tYZXdwX5AWbrweitaCkDn0e0fVtmW9jOKOA=w361" alt="">
+      </div>
 
       <div class="hero__content hero__content--stat">
-        <div class="stat">
-          <p class="counter-no">32</p>
-          <p>K</p>
+        <div class="stat-group">
+          <div class="stat">
+            <p class="counter-no">32</p>
+            <p>K</p>
+          </div>
+          <div class="stat-name">Artwork</div>
         </div>
-        <div class="stat">
-          <p class="counter-no">27</p>
-          <p>K</p>
+
+        <div class="stat-group">
+          <div class="stat">
+            <p class="counter-no">27</p>
+            <p>K</p>
+          </div>
+          <div class="stat-name">Auction</div>
         </div>
-        <div class="stat">
-          <p class="counter-no">16</p>
-          <p>K</p>
+ 
+        <div class="stat-group">
+          <div class="stat">
+            <p class="counter-no">16</p>
+            <p>K</p>
+          </div>
+          <div class="stat-name">Artist</div>
         </div>
       </div>
     </div>
@@ -136,8 +177,6 @@
             <a href="#" class="btn"><i class="bi bi-bag-heart"></i> Place a Bid</a>
           </div>
         </div>
-
-
       </div>
 
       <div class="nft__card">
@@ -261,9 +300,7 @@
           <p>Items</p>
         </div>
       </div>
-    </div>
 
-    <div class="sellers-cards">
       <div class="sellers-card">
         <img src="https://lh3.googleusercontent.com/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI=s130" alt="">
         
@@ -307,9 +344,9 @@
           <div class="items-sold">62</div>
           <p>Items</p>
         </div>
-      </div>
+      
     </div>
-  </section>
+  </div></section>
 
   <section class="explore py px">
     <div class="heading">
@@ -583,33 +620,89 @@
       <p class="heading__main">Create and Sell Your NFT</p>
     </div>
 
-    <div class="steps-card">
-      <div class="step-card">
-        <div class="step-card__icon">
-          <img src="https://free3dicon.com/wp-content/uploads/2021/04/wallet_perspective_matte_s-1-300x300.png.webp" alt="">
+    <div class="steps-card swiper">
+      <div class="swiper-wrapper">
+
+        <div class="step-card swiper-slide">
+          <div class="step-card__icon">
+            <img src="https://free3dicon.com/wp-content/uploads/2021/04/wallet_perspective_matte_s-1-300x300.png.webp" alt="">
+          </div>
+          <h3>Set Up Your Wallet</h3>
+          <p>Once you’ve set up your wallet of choice, connect it to Nitro NFT by clicking the wallet icon in the top right corner.</p>
         </div>
-        <h3>Set Up Your Wallet</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, repudiandae molestiae minima eum quasi nobis recusandae.</p>
+
+        <div class="step-card swiper-slide">
+          <div class="step-card__icon">
+           <img src="https://free3dicon.com/wp-content/uploads/2022/03/drawing-tools-300x300.png.webp" alt="">
+          </div>
+          <h3>Create Your Collection</h3>
+          <p>Click My Collections and set up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.</p>
+        </div>
+
+        <div class="step-card swiper-slide">
+          <div class="step-card__icon">
+           <img src="https://free3dicon.com/wp-content/uploads/2021/02/image_perspective_matte_s-1-300x300.png.webp" alt="">
+          </div>
+          <h3>Add Your NFT</h3>
+          <p>Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content.</p>
+        </div>
+
+        <div class="step-card swiper-slide">
+          <div class="step-card__icon">
+            <img src="https://free3dicon.com/wp-content/uploads/2022/02/capital-300x300.png.webp" alt="">
+          </div>
+          <h3>Upload them for sale</h3>
+          <p>Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!</p>
+        </div>
       </div>
-      <div class="step-card">
-        <div class="step-card__icon">
-         <img src="https://free3dicon.com/wp-content/uploads/2022/03/drawing-tools-300x300.png.webp" alt="">
-        </div>
-        <h3>Create Your Collection</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, repudiandae molestiae minima eum quasi nobis recusandae.</p>
+
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <footer class="footer py px">
+    <div class="footer-section footer-section--logo">
+      <div class="logo">
+        Nitro NFT
       </div>
-      <div class="step-card">
-        <div class="step-card__icon">
-          <img src="https://free3dicon.com/wp-content/uploads/2022/02/capital-300x300.png.webp" alt="">
-        </div>
-        <h3>Upload them for sale</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, repudiandae molestiae minima eum quasi nobis recusandae.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita maxime suscipit, praesentium aliquid minus reiciendis dolore consequuntur laboriosam aspernatur.</p>
+      <div class="socials">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-linkedin"></i>
+        <i class="bi bi-instagram"></i>
       </div>
     </div>
 
+    <div class="footer-section footer-section--links">
+      <div class="heading">Quick Links</div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Auction</a></li>
+        <li><a href="">Top</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
 
-  </section>
+    <div class="footer-section">
+      <div class="heading">Join Our Newsletter</div>
+      <p>Signup for our newsletter to get the <br> latest news in your inbox</p>
+      <form action="">
+        <input type="text" placeholder="Enter your email">
+        <i class="bi bi-send"></i>
+      </form>
+    </div>
+  </footer>
+
+  <div class="ball"></div>
+  
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="/gsap.c3c53238.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

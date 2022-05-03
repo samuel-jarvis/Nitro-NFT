@@ -136,10 +136,22 @@ gsap.from('.nav__actions', {
   opacity: 0,
   x: 20.
 });
-gsap.from(".hero__content--text", {
+gsap.from(".hero-h1", {
   duration: .8,
   delay: 1,
   x: -20,
+  opacity: '0'
+});
+gsap.from(".hero-p", {
+  duration: .5,
+  delay: 2,
+  y: -20,
+  opacity: '0'
+});
+gsap.from(".hero__content__btns", {
+  duration: .5,
+  delay: 2.5,
+  y: -20,
   opacity: '0'
 });
 gsap.from(".hero__content--image", {
@@ -155,6 +167,7 @@ gsap.from(".hero__content--stat", {
   opacity: '0'
 });
 gsap.from(".counter-no", {
+  // scrollTrigger: ".coounter-no",
   textContent: 0,
   delay: .5,
   duration: 2,
@@ -162,6 +175,60 @@ gsap.from(".counter-no", {
   snap: {
     textContent: 1
   }
+}); // Mouse follow circle animation
+
+gsap.set(".ball", {
+  xPercent: -50,
+  yPercent: -50
+});
+var ball = document.querySelector(".ball");
+var pos = {
+  x: window.innerWidth / 2,
+  y: window.innerHeight / 2
+};
+var mouse = {
+  x: pos.x,
+  y: pos.y
+};
+var speed = 0.1;
+var xSet = gsap.quickSetter(ball, "x", "px");
+var ySet = gsap.quickSetter(ball, "y", "px");
+window.addEventListener("mousemove", function (e) {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+gsap.ticker.add(function () {
+  // adjust speed for higher refresh monitors
+  var dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+  pos.x += (mouse.x - pos.x) * dt;
+  pos.y += (mouse.y - pos.y) * dt;
+  xSet(pos.x);
+  ySet(pos.y);
+}); // Mobile Dropdown
+
+openBtn = document.querySelector('.menu-btn');
+closeBtn = document.querySelector('.close-btn');
+tl = gsap.timeline();
+tl.paused(true);
+tl.to('.overlay2', {
+  height: "100vh",
+  duration: .5
+});
+tl.to('.overlay', {
+  height: "100vh",
+  duration: .6
+}, "-=.3");
+tl.from('.links__list--mobile', {
+  y: '30px',
+  stagger: 0.1,
+  opacity: 0
+});
+openBtn.addEventListener('click', function () {
+  tl.play();
+});
+closeBtn.addEventListener('click', function () {
+  console.log('Hell No');
+  tl.reverse();
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -191,7 +258,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59865" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57458" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

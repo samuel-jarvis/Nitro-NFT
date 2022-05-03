@@ -1,4 +1,5 @@
 @use "../abstract/variables" as *;
+@use "mixins" as *;
 
 *,
 *::after,
@@ -77,6 +78,30 @@ body {
   padding-right: 12rem;
 }
 
+@include media (1200px){
+  .py {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  
+  .px {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@include media (800px){
+  .py {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  
+  .px {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 // a {
 //   font-size: 1.8rem;
 //   background: rgb(251,76,59);
@@ -102,4 +127,15 @@ body {
     font-size: 5rem;
     font-weight: bold;
   }
+
+  @include media (1200px){
+    &__sub {
+      font-size: 1.8rem;
+    }
+
+    &__main{
+      font-size: 4rem;
+    }
+  }
 }
+
