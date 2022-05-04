@@ -112,3 +112,5 @@ closeBtn.addEventListener('click', () => {
   console.log('Hell No')
   tl.reverse();
 })
+
+// Smooth scrolling

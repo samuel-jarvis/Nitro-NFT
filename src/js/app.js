@@ -11,6 +11,14 @@ window.addEventListener('scroll', function(){
 });
 
 
+// Smooth scrolling
+// document.querySelector('.links__lists').addEventListener
+// ('click', function(e){
+//   e.preventDefault()
+//   console.log(e.target)
+// })
+
+// Swiper JS initialization
 const swiper = new Swiper('.swiper', {
   // Navigation arrows
   navigation: {

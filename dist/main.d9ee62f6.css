@@ -170,24 +170,7 @@ on {
 }
 .nav__actions a {
   position: relative;
-}
-.nav__actions a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgb(251, 76, 59) 35%, rgb(226, 43, 109) 100%);
-  transition: all 0.2s ease-in;
-  z-index: -1;
-  transform: translateX(-100%);
-  border-radius: 2rem;
-  font-size: 1.6rem;
-  display: block;
-}
-.nav__actions a:hover::before {
-  transform: translateX(0);
+  transition: all 0.3s;
 }
 @media only screen and (max-width: 800px) {
   .nav__actions a {
@@ -469,6 +452,7 @@ on {
   font-size: 1.4rem;
   color: #d0c5c5;
   align-items: center;
+  cursor: pointer;
 }
 .nft__card .cta__history .bi {
   color: #d0c5c5;
@@ -496,7 +480,7 @@ on {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, rgb(251, 76, 59) 35%, rgb(226, 43, 109) 100%);
-  transition: all 0.2s ease-in;
+  transition: all 0.4s ease-in;
   z-index: -1;
   transform: translateX(-100%);
   border-radius: 2rem;
@@ -646,6 +630,7 @@ on {
 @media only screen and (max-width: 800px) {
   .footer {
     grid-template-columns: 1fr;
+    padding-bottom: 4rem;
   }
 }
 
@@ -714,13 +699,14 @@ on {
   left: 0;
 }
 .footer-section input {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 2rem;
-  padding: 1.5rem;
+  padding: 1.2rem;
   color: white;
   width: 100%;
+  font-family: inherit;
 }
 .footer-section .bi-send {
   background-color: #FA4B3A;
@@ -749,6 +735,23 @@ on {
 
 .swiper-wrapper {
   align-items: center;
+}
+
+.copyright {
+  color: #d0c5c5;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: black;
+  padding: 2rem 0;
+}
+.copyright .bi {
+  color: #E52E67;
+  padding: 0 1px;
+}
+.copyright a {
+  color: #E52E67;
+  text-decoration: none;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -785,6 +788,11 @@ on {
   border-radius: 50%;
   pointer-events: none;
   z-index: 30;
+}
+@media only screen and (max-width: 700px) {
+  .ball {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */

@@ -139,6 +139,7 @@
   @include media (800px){
     & {
       grid-template-columns: 1fr;
+      padding-bottom: 4rem;
     }
   }
 }
@@ -221,13 +222,14 @@
   
 
   input {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 2rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
     color: white;
     width: 100%;
+    font-family: inherit;
   }
 
   .bi-send {
@@ -261,7 +263,25 @@
 
 .swiper-wrapper {
   align-items: center;
+}
 
+.copyright {
+  color: $white;
+  font-family: $font-text;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: black;
+  padding: 2rem 0;
+
+  .bi {
+    color: $pink;
+    padding: 0 1px;
+  }
+  
+  a {
+    color: $pink;
+    text-decoration: none;
+  }
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -294,4 +314,8 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 30;
+
+  @include media (700px){
+    display: none;
+  }
 }
