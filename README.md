@@ -2,7 +2,7 @@
 # Nitro-Nft
 Demo of an Nft Market Place
 
-[Link](https://nftverse.netlify.app/)
+[Site Link](https://nitronft.netlify.app/)
 
 ### Technologies I Used
 * HTML
