@@ -1,0 +1,2 @@
+const nav=document.querySelector(".nav");window.addEventListener("scroll",(function(){window.scrollY>200?nav.classList.add("navSticky"):nav.classList.remove("navSticky")}));const swiper=new Swiper(".swiper",{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},scrollbar:{el:".swiper-scrollbar"},breakpoints:{640:{slidesPerView:1,spaceBetween:20},768:{slidesPerView:2,spaceBetween:20},1024:{slidesPerView:3,spaceBetween:30}}});
+//# sourceMappingURL=index.5041f116.js.map

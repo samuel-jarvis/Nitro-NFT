@@ -1,17 +1,17 @@
 {
   "name": "nitro_nft",
   "version": "1.0.0",
-  "description": "Demo of an nft marketplace",
-  "main": "index.js",
+  "description": "Demo of an NFT marketplace",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Samuel Jarvis",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "parcel-bundler": "^1.3.1",
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.5.0",
     "sass": "^1.50.1"
   },
   "dependencies": {
