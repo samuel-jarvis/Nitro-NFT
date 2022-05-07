@@ -26,7 +26,7 @@
 74C:\Users\Jarvis\Desktop\nitro_nft\node_modules\util-deprecate\package.json132951489708872097 0
 116C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\optimizer-htmlnano\node_modules\stylehacks\types\isMixin.d.ts132963581073413211 0
 82C:\Users\Jarvis\Desktop\nitro_nft\node_modules\bootstrap-icons\icons\bell-fill.svg132952308289116420 0
-38C:\Users\Jarvis\Desktop\nitro_nft\dist132963588756915404 1
+38C:\Users\Jarvis\Desktop\nitro_nft\dist132963926419909308 1
 112C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\transformer-posthtml\node_modules\posthtml-parser\license132963581025543152 0
 94C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\core\node_modules\json5\lib\register.js132963581034675360 0
 81C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\optimizer-css\node_modules132963581309697583 1
@@ -60,7 +60,7 @@
 83C:\Users\Jarvis\Desktop\nitro_nft\node_modules\caniuse-lite\data\features\tls1-3.js132963581109183263 0
 115C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\packager-svg\node_modules\entities\lib\decode_codepoint.d.ts132963581049194715 0
 78C:\Users\Jarvis\Desktop\nitro_nft\node_modules\caniuse-lite\data\regions\EG.js132963581096514507 0
-44C:\Users\Jarvis\Desktop\nitro_nft\index.html132963586952509645 0
+44C:\Users\Jarvis\Desktop\nitro_nft\index.html132963926008089724 0
 64C:\Users\Jarvis\Desktop\nitro_nft\node_modules\colord\types.d.ts132963581060304980 0
 94C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\watcher\src\shared\BruteForceBackend.hh132963581046819840 0
 108C:\Users\Jarvis\Desktop\nitro_nft\node_modules\@parcel\transformer-babel\node_modules\json5\lib\stringify.js132963581036654654 0
@@ -8403,7 +8403,7 @@
 61C:\Users\Jarvis\Desktop\nitro_nft\dist\index.bb5b3cde.css.map132963588756745886 0
 56C:\Users\Jarvis\Desktop\nitro_nft\dist\index.f180c050.js132963588756586281 0
 60C:\Users\Jarvis\Desktop\nitro_nft\dist\index.f180c050.js.map132963588756736063 0
-49C:\Users\Jarvis\Desktop\nitro_nft\dist\index.html132963588756586281 0
+49C:\Users\Jarvis\Desktop\nitro_nft\dist\index.html132963926419839485 0
 56C:\Users\Jarvis\Desktop\nitro_nft\dist\main.c01e3dee.css132960648007072939 0
 60C:\Users\Jarvis\Desktop\nitro_nft\dist\main.c01e3dee.css.map132960648007352163 0
 60C:\Users\Jarvis\Desktop\nitro_nft\dist\main.d9ee62f6.css.map132961083328591941 0
